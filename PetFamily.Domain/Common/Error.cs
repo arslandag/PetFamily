@@ -2,6 +2,8 @@ namespace PetFamily.Domain.Common;
 
 public class Error
 {
+    public static readonly Error None = new(string.Empty, string.Empty);
+
     private const string Separator = "||";
 
     public string Code { get; }
@@ -35,7 +37,7 @@ public static class Errors
     {
         public static Error Iternal(string message)
             => new("iternal", message);
-        
+
         public static Error Unexpected()
             => new("unexpecret", "unexpecret");
 
@@ -75,6 +77,20 @@ public static class Errors
         public static Error PhotoCountLimit()
         {
             return new("volunteers.photo.limit", "Max photo count limit is 5");
+        }
+    }
+
+    public static class VolunteersApplications
+    {
+        public static Error AlreadyApproved() =>
+            new("volunteers.applications.already.approved", "Volunteer application has already been approved");
+    }
+
+    public static class Users
+    {
+        public static Error InvalidCredentials()
+        {
+            return new("users.invalid.credentials", "User's credentials is invalid");
         }
     }
 }

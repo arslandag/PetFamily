@@ -1,19 +1,27 @@
-using Hangfire;
-using Hangfire.PostgreSql;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using PetFamily.API.Authorization;
+using PetFamily.API.Extensions;
 using PetFamily.API.Middlewares;
 using PetFamily.API.Validation;
 using PetFamily.Application;
-using PetFamily.Domain.Entities;
 using PetFamily.Infrastructure;
-using PetFamily.Infrastructure.DbContexts;
-using PetFamily.Infrastructure.Repositories;
+using Serilog;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSwaggerGen();
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.Debug()
+    .WriteTo.Seq(builder.Configuration.GetSection("Seq").Value
+                 ?? throw new ApplicationException("Seq configuration is empty"))
+    .CreateLogger();
+
+builder.Services.AddSwagger();
 builder.Services.AddControllers();
+
+builder.Services.AddSerilog();
 
 builder.Services
     .AddApplication()
@@ -24,7 +32,10 @@ builder.Services.AddFluentValidationAutoValidation(configuration =>
     configuration.OverrideDefaultResultFactoryWith<CustomResultFactory>();
 });
 
-builder.Services.AddHttpLogging(options => { });
+builder.Services.AddAuth(builder.Configuration);
+
+builder.Services.AddSingleton<IAuthorizationHandler, PermissionsAuthorizationsHandler>();
+builder.Services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
 
 // add hangfire client
 // builder.Services.AddHangfire(configuration => configuration
@@ -41,22 +52,26 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    using var scope = app.Services.CreateScope();
-    var dbContext = scope.ServiceProvider.GetRequiredService<PetFamilyWriteDbContext>();
-    await dbContext.Database.MigrateAsync();
+    // using var scope = app.Services.CreateScope();
+    // var dbContext = scope.ServiceProvider.GetRequiredService<PetFamilyWriteDbContext>();
+    // await dbContext.Database.MigrateAsync();
 
+    /*var passwordHash = BCrypt.Net.BCrypt.EnhancedHashPassword("admin");
 
-    var admin = new User("admin", "admin", Role.Admin);
+    var admin = new User("admin", passwordHash, Role.Admin);
 
     await dbContext.Users.AddAsync(admin);
-    await dbContext.SaveChangesAsync();
+    await dbContext.SaveChangesAsync();*/
 }
 
 app.UseMiddleware<ExceptionMiddleware>();
-app.UseHttpLogging();
+app.UseSerilogRequestLogging();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
@@ -64,3 +79,10 @@ app.MapControllers();
 // app.MapHangfireDashboard("/dashboard");
 
 app.Run();
+
+namespace PetFamily.API
+{
+    public class AuthOptions : AuthenticationSchemeOptions
+    {
+    }
+}
