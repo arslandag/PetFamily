@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication;
+using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using PetFamily.API.Authorization;
 using PetFamily.API.Extensions;
@@ -6,6 +6,7 @@ using PetFamily.API.Middlewares;
 using PetFamily.API.Validation;
 using PetFamily.Application;
 using PetFamily.Infrastructure;
+using PetFamily.Infrastructure.Jobs;
 using Serilog;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
 
@@ -20,7 +21,6 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Services.AddSwagger();
 builder.Services.AddControllers();
-
 builder.Services.AddSerilog();
 
 builder.Services
@@ -34,35 +34,7 @@ builder.Services.AddFluentValidationAutoValidation(configuration =>
 
 builder.Services.AddAuth(builder.Configuration);
 
-builder.Services.AddSingleton<IAuthorizationHandler, PermissionsAuthorizationsHandler>();
-builder.Services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
-
-// add hangfire client
-// builder.Services.AddHangfire(configuration => configuration
-//     .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
-//     .UseSimpleAssemblyNameTypeSerializer()
-//     .UseRecommendedSerializerSettings()
-//     .UsePostgreSqlStorage(c => c
-//         .UseNpgsqlConnection(builder.Configuration.GetConnectionString("HangFire"))));
-
-// add hangfire server
-// builder.Services.AddHangfireServer();
-
 var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    // using var scope = app.Services.CreateScope();
-    // var dbContext = scope.ServiceProvider.GetRequiredService<PetFamilyWriteDbContext>();
-    // await dbContext.Database.MigrateAsync();
-
-    /*var passwordHash = BCrypt.Net.BCrypt.EnhancedHashPassword("admin");
-
-    var admin = new User("admin", passwordHash, Role.Admin);
-
-    await dbContext.Users.AddAsync(admin);
-    await dbContext.SaveChangesAsync();*/
-}
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseSerilogRequestLogging();
@@ -75,14 +47,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// app.UseHangfireDashboard();
-// app.MapHangfireDashboard("/dashboard");
+app.UseHangfireDashboard();
+app.MapHangfireDashboard();
+
+HangfireWorker.StartRecurringJobs();
 
 app.Run();
-
-namespace PetFamily.API
-{
-    public class AuthOptions : AuthenticationSchemeOptions
-    {
-    }
-}

@@ -8,6 +8,7 @@ namespace PetFamily.Infrastructure.DbContexts;
 public class PetFamilyReadDbContext : DbContext
 {
     private readonly IConfiguration _configuration;
+    
 
     public PetFamilyReadDbContext(IConfiguration configuration)
     {

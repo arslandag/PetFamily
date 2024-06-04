@@ -1,8 +1,3 @@
 ﻿namespace PetFamily.Application.Dtos;
 
-public record VolunteerDto(
-    Guid Id,
-    string FirstName,
-    string Lastname,
-    string? Patronomic,
-    IReadOnlyList<VolunteerPhotoDto> Photos);
+public record VolunteerDto(Guid Id, string FistName, string LastName, string? Patronymic, IReadOnlyList<VolunteerPhotoDto> Photos);

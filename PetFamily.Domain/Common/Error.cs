@@ -53,7 +53,7 @@ public static class Errors
             return new("value.is.invalid", $"{label} is invalid");
         }
 
-        public static Error ValueIsRequried(string? name = null)
+        public static Error ValueIsRequired(string? name = null)
         {
             var label = name ?? "Value";
             return new("value.is.required", $"{label} is required");
@@ -72,11 +72,29 @@ public static class Errors
         }
     }
 
+    public static class Email
+    {
+        public static Error FailedToSendEmail()
+        {
+            return new("email.send.fail", "Fail to send email");
+        }
+    }
+
     public static class Volunteers
     {
         public static Error PhotoCountLimit()
         {
             return new("volunteers.photo.limit", "Max photo count limit is 5");
+        }
+
+        public static Error FileTypeInvalid(string? fileType)
+        {
+            return new("invalid.file.type", $"This {fileType}: file type is invalid");
+        }
+
+        public static Error FileLengthInvalid(long? length)
+        {
+            return new("invalid.file.length", $"This {length}: file length is invalid");
         }
     }
 
