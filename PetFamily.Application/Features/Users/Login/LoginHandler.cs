@@ -15,19 +15,20 @@ public class LoginHandler
         _jwtProvider = jwtProvider;
     }
 
-    public async Task<Result<string, Error>> Handle(LoginRequest request, CancellationToken ct)
+    public async Task<Result<LoginResponse, Error>> Handle(LoginRequest request, CancellationToken ct)
     {
         var user = await _usersRepository.GetByEmail(request.Email, ct);
 
         if (user.IsFailure)
             return user.Error;
         
-        var isVerified = BCrypt.Net.BCrypt.EnhancedVerify(request.Password, user.Value.PasswordHash);
+        var isVerified = BCrypt.Net.BCrypt.Verify(request.Password, user.Value.PasswordHash);
         if (isVerified == false)
             return Errors.Users.InvalidCredentials();
 
-        var token = _jwtProvider.Generate(user.Value); 
+        var token = _jwtProvider.Generate(user.Value);
 
-        return token;
+        var response = new LoginResponse(token.Value, user.Value.Role.Name);
+        return response;
     }
 }

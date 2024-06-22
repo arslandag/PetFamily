@@ -17,6 +17,8 @@ using PetFamily.Infrastructure.MessageBuses;
 using PetFamily.Infrastructure.Options;
 using PetFamily.Infrastructure.Providers;
 using PetFamily.Infrastructure.Queries.Pets;
+using PetFamily.Infrastructure.Queries.Pets.GetPetById;
+using PetFamily.Infrastructure.Queries.Volunteers.GetPets;
 using PetFamily.Infrastructure.Queries.Volunteers.GetVolunteer;
 using PetFamily.Infrastructure.Queries.Volunteers.GetVolunteers;
 using PetFamily.Infrastructure.Repositories;
@@ -86,6 +88,8 @@ public static class DependencyRegistration
         // services.AddScoped<GetVolunteerQuery>();
         services.AddScoped<GetVolunteerQuery>();
         services.AddScoped<GetVolunteersQuery>();
+        services.AddScoped<GetVolunteerPetsQuery>();
+        services.AddScoped<GetByIdPetQuery>();
 
         return services;
     }
