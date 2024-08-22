@@ -1,0 +1,13 @@
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\bin\Debug\net8.0\PetFamily.Domain.deps.json
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\bin\Debug\net8.0\PetFamily.Domain.dll
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\bin\Debug\net8.0\PetFamily.Domain.pdb
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.csproj.AssemblyReference.cache
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.AssemblyInfoInputs.cache
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.AssemblyInfo.cs
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.csproj.CoreCompileInputs.cache
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.sourcelink.json
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.dll
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\refint\PetFamily.Domain.dll
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.pdb
+C:\Users\arslan\source\repos\PetFamily\PetFamilyBackend\PetFamily.Domain\obj\Debug\net8.0\ref\PetFamily.Domain.dll

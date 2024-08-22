@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "JbAFeFyGYxHUsTzO+cJt4cyaQTLmhrBkYOHhuTNQOZQZeqCi6FVneITB41GzfmFGB8sGk2Ntsln8UjfaUfXiYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Domain\\PetFamily.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arslan\\.nuget\\packages\\csharpfunctionalextensions\\2.41.0\\csharpfunctionalextensions.2.41.0.nupkg.sha512"
+  ],
+  "logs": []
+}

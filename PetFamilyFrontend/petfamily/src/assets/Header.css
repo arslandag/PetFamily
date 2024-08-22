@@ -1,0 +1,72 @@
+.header{
+    background-color: white;
+    height: 65px;
+    border-bottom: 2px solid black;
+}
+
+.imageCat{
+    margin: 5px 0px 5px 10px;
+    width: 55px;
+    height: 50px;
+
+}
+
+.searchField{
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.searchField p {
+    color: grey;
+}
+
+.imageSearch{
+    margin: 5px 10px 5px 5px; 
+}
+
+.imageUser{
+    margin: 0px 15px 0px 0px;
+    width: 40px;
+    height: 40px;
+}
+
+.top-bar{
+    display: flex;
+    margin: 0px 0px 0px 0px ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar h1{
+    color : black;
+    margin: 0px 0px 0px 0px;
+}
+
+.iconField{
+    display: flex;
+    align-items: center;
+}
+
+.userField{
+    display: flex;
+    align-items: center;
+}
+
+.inputSearch {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    color: black;
+    outline: none;
+    transition:  0.3s; 
+    font-size: 25px;
+    
+}
+  
+  .inputSearch:focus {
+    background: rgba(255, 255, 255, 0.2);
+  }

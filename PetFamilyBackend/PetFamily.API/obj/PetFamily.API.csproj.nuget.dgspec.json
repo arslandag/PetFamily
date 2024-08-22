@@ -1,0 +1,503 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.API\\PetFamily.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.API\\PetFamily.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.API\\PetFamily.API.csproj",
+        "projectName": "PetFamily.API",
+        "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.API\\PetFamily.API.csproj",
+        "packagesPath": "C:\\Users\\arslan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visualsdk\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\arslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.TelegramBot\\PetFamily.Infrastructure.TelegramBot.csproj": {
+                "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.TelegramBot\\PetFamily.Infrastructure.TelegramBot.csproj"
+              },
+              "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure\\PetFamily.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure\\PetFamily.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.20.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Application\\PetFamily.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Application\\PetFamily.Application.csproj",
+        "projectName": "PetFamily.Application",
+        "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Application\\PetFamily.Application.csproj",
+        "packagesPath": "C:\\Users\\arslan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visualsdk\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\arslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Domain\\PetFamily.Domain.csproj": {
+                "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Domain\\PetFamily.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Minio": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "SharpGrip.FluentValidation.AutoValidation.Mvc": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Domain\\PetFamily.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Domain\\PetFamily.Domain.csproj",
+        "projectName": "PetFamily.Domain",
+        "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Domain\\PetFamily.Domain.csproj",
+        "packagesPath": "C:\\Users\\arslan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visualsdk\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\arslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[2.41.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.Kafka\\PetFamily.Infrastructure.Kafka.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.Kafka\\PetFamily.Infrastructure.Kafka.csproj",
+        "projectName": "PetFamily.Infrastructure.Kafka",
+        "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.Kafka\\PetFamily.Infrastructure.Kafka.csproj",
+        "packagesPath": "C:\\Users\\arslan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.Kafka\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visualsdk\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\arslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Application\\PetFamily.Application.csproj": {
+                "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Application\\PetFamily.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.TelegramBot\\PetFamily.Infrastructure.TelegramBot.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.TelegramBot\\PetFamily.Infrastructure.TelegramBot.csproj",
+        "projectName": "PetFamily.Infrastructure.TelegramBot",
+        "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.TelegramBot\\PetFamily.Infrastructure.TelegramBot.csproj",
+        "packagesPath": "C:\\Users\\arslan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.TelegramBot\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visualsdk\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\arslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure\\PetFamily.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure\\PetFamily.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[19.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure\\PetFamily.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure\\PetFamily.Infrastructure.csproj",
+        "projectName": "PetFamily.Infrastructure",
+        "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure\\PetFamily.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\arslan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visualsdk\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\arslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Application\\PetFamily.Application.csproj": {
+                "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Application\\PetFamily.Application.csproj"
+              },
+              "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.Kafka\\PetFamily.Infrastructure.Kafka.csproj": {
+                "projectPath": "C:\\Users\\arslan\\source\\repos\\PetFamily\\PetFamilyBackend\\PetFamily.Infrastructure.Kafka\\PetFamily.Infrastructure.Kafka.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.12, )"
+            },
+            "Hangfire.PostgreSql": {
+              "target": "Package",
+              "version": "[1.20.8, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Minio": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

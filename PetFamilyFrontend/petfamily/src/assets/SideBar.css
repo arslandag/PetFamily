@@ -1,0 +1,38 @@
+.sidebar{
+    background-color: white;
+    border-right: 2px solid black;
+    height: auto;
+    min-height: 878px;
+    width: 250px;
+    color: black;
+}
+.navigationpanel{
+    font-size: 25px;
+}
+
+.allpets{
+    font-size: 25px;
+    border-bottom: 2px solid black;
+}
+
+.allvolunteer{
+    font-size: 25px;
+    border-bottom: 2px solid black;
+}
+
+.news{
+    font-size: 25px;
+    border-bottom: 2px solid black;
+}
+
+.petsbutton {
+    color: black;
+    transition: .3s linear;
+    background: white;
+    border: none;
+    height: 50px;
+}
+
+.petsbutton :hover {
+    box-shadow: 0 0 0 1px white, 0 0 0 2px black;
+}
